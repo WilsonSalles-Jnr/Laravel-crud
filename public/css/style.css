@@ -1,5 +1,13 @@
+.start {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-signin {
-  padding: 5% 40%;
+  /* padding: 5% 40%; */
   text-align: center;
 }
 
@@ -45,4 +53,20 @@
   display: flex;
   justify-content: space-evenly;
   padding: 1% 0;
+}
+
+.form-signin section {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-name {
+  color: black;
+  animation-name: nameAnim;
+  animation-duration: 3s;
+}
+
+@keyframes nameAnim {
+  from {color: white;}
+  to {color: black;}
 }

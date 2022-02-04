@@ -6,34 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <title>Login</title>
+  <title>Laravel User List</title>
 </head>
 <body>
+  <main class="start">
+
     <form class="form-signin">
       <div class="text-center mb-4">
         <img class="mb-4" src="https://laravel.com/img/logomark.min.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-        <p>Faça o login para conectar-se ao banco de dados</p>
+        <h1 class="h3 mb-3 font-weight-normal">Laravel User List</h1>
+        <hr>
+        <p>Create, Read, Update and Delete users</p>
       </div>
-
-      <div class="form-label-group">
-        <label for="inputEmail">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-      </div>
-
-      <div class="form-label-group">
-        <label for="inputPassword">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-      </div>
-
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      @auth
+      <p>Bem vindo</p>
+      <p class="login-name"><strong>{{$usuario->name}}</strong></p>
+      <section>
+        
+        <a href="/lista" type="button" class="btn btn-primary mt-3">Ver Lista</a>
+      </section>
+      @endauth
+      @guest
+      <section>
+        <a href="/login" type="button" class="btn btn-success">Login</a>
+        <a href="/register" class="mt-3">Criar novo usuário</a>
+      </section>
+      @endguest
       <p class="mt-5 mb-3 text-muted text-center">© Wilson Salles Junior</p>
-      <p class="mt-5 mb-3 text-muted text-center"><a href="https://getbootstrap.com/docs/4.0/examples/floating-labels/" class="text-muted">modelo de tela de login de Bootstrap</a></p>
     </form>
+  </main>
 </body>
 </html>

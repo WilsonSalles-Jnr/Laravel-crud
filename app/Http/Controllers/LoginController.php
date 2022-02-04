@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function loginIndex() {
-        return view('login');
+        $usuario = auth()->user();
+        return view('login', ['usuario' => $usuario]);
     }
 }
