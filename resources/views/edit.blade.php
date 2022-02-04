@@ -25,10 +25,10 @@
         @csrf
         @method('PUT')
         <td>{{$usuario->id}}</td>
-        <td><input type="text" id="nome" placeholder="Nome" value="{{$usuario->nome}}"></td>
-        <td><input type="text"  id="sobrenome" placeholder="Sobrenome" value="{{$usuario->sobrenome}}"></td>
-        <td><input type="number"  id="celular" placeholder="Phone" value="{{$usuario->celular}}"></td>
-        <td><input type="email" id="email" placeholder="e-mail" value="{{$usuario->email}}"></td>
+        <td><input type="text" id="nome" name="nome" placeholder="Nome" value="{{$usuario->nome}}"></td>
+        <td><input type="text"  id="sobrenome" name="sobrenome" placeholder="Sobrenome" value="{{$usuario->sobrenome}}"></td>
+        <td><input type="number"  id="celular" name="celular" placeholder="Phone" value="{{$usuario->celular}}"></td>
+        <td><input type="email" id="email" name="email" placeholder="e-mail" value="{{$usuario->email}}"></td>
       <td><button type="submit" class="btn btn-success">Salvar</button></td>
 
       </form>

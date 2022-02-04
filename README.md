@@ -6,9 +6,9 @@ Fiz este projeto para praticar PHP, Laravel e CRUD, nele, é possível entrar at
 - - [ ] Verificar usuário;
 - - [ ] Entrar;
 - - [ ] Criar usuário.
-- [ ] Lista de Usuários:
+- [x] Lista de Usuários:
 - - [x] Conectar ao banco de dados;
 - - [x] Ler usuários;
 - - [x] Criar usuário;
-- - [ ] Editar usuário;
+- - [x] Editar usuário;
 - - [x] Deletar usuário.
