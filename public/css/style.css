@@ -1,0 +1,48 @@
+.form-signin {
+  padding: 5% 40%;
+  text-align: center;
+}
+
+.main-delete {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(204, 204, 204);
+}
+
+.main-delete section {
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.main-delete article {
+  display: flex;
+  justify-content: space-around;
+}
+
+.create-main {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(45deg, rgb(143, 110, 110), rgb(98, 98, 117));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-main article {
+  display: flex;
+  justify-content: space-around;
+}
+
+.lista-nav {
+  width: 100vw;
+  background-image: linear-gradient(0, rgb(245, 245, 245), rgb(218, 218, 218));
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1% 0;
+}
