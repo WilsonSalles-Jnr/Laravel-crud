@@ -12,3 +12,25 @@ Fiz este projeto para praticar PHP, Laravel e CRUD, nele, é possível entrar at
 - - [x] Criar usuário;
 - - [x] Editar usuário;
 - - [x] Deletar usuário.
+
+# Telas
+## Tela inicial
+![tela inicial](./screenshots/tela_inicial.png)
+## Tela cadastro
+![tela inicial](./screenshots/tela_cadastro.png)
+## Tela login
+![tela inicial](./screenshots/tela_login.png)
+## Tela pós login
+![tela inicial](./screenshots/tela_logado.png)
+## Tela lista vazia
+![tela inicial](./screenshots/tela_lista_vazia.png)
+## Tela cadastro de usuário
+![tela inicial](./screenshots/tela_cadastro_usuario.png)
+## Tela editar usuário
+![tela inicial](./screenshots/tela_editar_usuario.png)
+## Tela usuario editado
+![tela inicial](./screenshots/tela_usuario_editado.png)
+## Tela deletar usuário
+![tela inicial](./screenshots/tela_deletar_usuario.png)
+## Tela varios usuários
+![tela inicial](./screenshots/tela_varios_usuarios.png)

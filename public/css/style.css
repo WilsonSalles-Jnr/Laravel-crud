@@ -55,6 +55,12 @@
   padding: 1% 0;
 }
 
+.zero-user {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .form-signin section {
   display: flex;
   flex-direction: column;

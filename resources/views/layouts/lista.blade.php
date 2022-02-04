@@ -45,6 +45,7 @@
       </tr>
       @yield('content')
     </table>
+    @yield('noUser')
     @endauth
 </body>
 </html>
