@@ -43,6 +43,12 @@ class UserController extends Controller
 
         return view('delete', ['usuario' => $usuario]);
     }
+
+    public function destroy($id) {
+        $usuario = Userlist::findOrFail($id)->delete();
+
+        return redirect('/lista');
+    }
     
     public function creationUser() {
         return view('create');

@@ -19,8 +19,15 @@ Route::get('/', [LoginController::class, 'loginIndex']);
 use App\Http\Controllers\UserController;
 Route::get('/lista', [UserController::class, 'userList']);
 
-Route::get('/lista/edit/', [UserController::class, 'creationUser']);
-Route::post('/lista/edit/', [UserController::class, 'store']);
-Route::get('/lista/edit/{id}', [UserController::class, 'show']);
-Route::put('/lista/update/{id}', [UserController::class, 'update']);
-Route::get('lista/delete/{id}', [UserController::class, 'deleteUser']);
+Route::get('/lista/edit/', [UserController::class, 'creationUser'])->middleware('auth');
+Route::post('/lista/edit/', [UserController::class, 'store'])->middleware('auth');
+
+Route::get('/lista/edit/{id}', [UserController::class, 'show'])->middleware('auth');
+Route::put('/lista/update/{id}', [UserController::class, 'update'])->middleware('auth');
+
+Route::get('lista/delete/{id}', [UserController::class, 'deleteUser'])->middleware('auth');
+Route::delete('lista/delete/{id}', [UserController::class, 'destroy'])->middleware('auth');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

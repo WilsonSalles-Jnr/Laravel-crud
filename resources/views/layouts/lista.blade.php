@@ -11,10 +11,28 @@
 </head>
 <body>
   <nav class="lista-nav">
-    <a href="http://127.0.0.1:8000/" type="button" class="btn btn-danger">Sair</a>
     <h3>Lista de usuários</h3>
-    <a href="http://127.0.0.1:8000/lista/edit" type="button" class="btn btn-success">Adicionar</a>
+    @auth
+    <a href="/lista/edit" type="button" class="btn btn-success">Adicionar</a>
+    <form action="/logout" method="POST">
+      @csrf
+      <a href="/logout"
+        type="button"
+        class="btn btn-danger"
+        onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+    </form>
+    @endauth
+    @guest
+    <a href="/login" type="button" class="btn btn-primary">Login</a>
+    <a href="/register" type="button" class="btn btn-primary">Registrar</a>
+    @endguest
   </nav>
+    @guest
+    <section>
+      <h1>Apenas usuários podem ver a lista de usuários</h1>
+    </section>
+    @endguest
+    @auth
     <table class="table table-striped table-hover p-3">
       <tr>
         <th>#</th>
@@ -27,5 +45,6 @@
       </tr>
       @yield('content')
     </table>
+    @endauth
 </body>
 </html>

@@ -22,7 +22,12 @@
       <hr>
       <article>
       <a href="http://127.0.0.1:8000/lista" type="button" class="btn btn-primary">Cancelar</a>
-      <button type="button" class="btn btn-danger">Deletar</button>
+      <form action="/lista/delete/{{ $usuario->id }}" method="POST">
+        @csrf
+        @method('DELETE')
+
+        <button type="submit" class="btn btn-danger">Deletar</button>
+      </form>
       </article>
     </section>
   </main>

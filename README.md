@@ -11,4 +11,4 @@ Fiz este projeto para praticar PHP, Laravel e CRUD, nele, é possível entrar at
 - - [x] Ler usuários;
 - - [x] Criar usuário;
 - - [ ] Editar usuário;
-- - [ ] Deletar usuário.
+- - [x] Deletar usuário.
